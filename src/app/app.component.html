@@ -1,4 +1,14 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<md-sidenav-container fullscreen>
+  <md-sidenav #sidenav>
+
+  </md-sidenav>
+  <md-toolbar color="primary" class="md-elevation-z4">
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+    {{ title }}
+  </md-toolbar>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
