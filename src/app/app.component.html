@@ -1,6 +1,15 @@
 <md-sidenav-container fullscreen>
   <md-sidenav #sidenav>
-
+    <md-nav-list>
+      <a *ngFor="let item of navItems"
+         md-list-item [routerLink]="item.path"
+         routerLinkActive="active" 
+         [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.toggle()">
+        <md-icon md-list-icon>{{ item.icon }}</md-icon>
+        <span md-line>{{ item.title }}</span>
+        <span md-line class="secondary">{{ item.description }}</span>
+      </a>
+    </md-nav-list>
   </md-sidenav>
   <md-toolbar color="primary" class="md-elevation-z4">
     <button md-icon-button (click)="sidenav.open()">

@@ -7,6 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home';
+import { CategoryModule } from './category';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HomeModule } from './home';
     MaterialModule.forRoot(),
     AppRoutingModule,
     HomeModule,
+    CategoryModule,
   ],
   providers: [Title],
   bootstrap: [AppComponent]

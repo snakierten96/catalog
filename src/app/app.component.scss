@@ -1,0 +1,20 @@
+@import '../variables';
+$backcolor: rgba(map-get($app-accent, default),.4);
+$contrast: map-get($app-accent, "default-contrast");
+
+.secondary {
+  color: rgba(0,0,0,0.54);
+}
+
+.container {
+  padding: 20px 10px;
+}
+
+md-sidenav {
+  md-nav-list {
+    a.active > div.md-list-item {
+      background: $backcolor;
+      color: $contrast;
+    }
+  }
+}
