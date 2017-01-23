@@ -7,7 +7,7 @@ describe('catalog App', function() {
     page = new CatalogPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display have toolbar title saying app works', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('app works!');
   });
