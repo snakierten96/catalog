@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import { INavItem, NAVITEMS } from './app.navigation';
@@ -6,9 +6,10 @@ import { INavItem, NAVITEMS } from './app.navigation';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title: string = 'app works!';
   navItems: INavItem[] = NAVITEMS; 
 
@@ -16,5 +17,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
+  }
+  
+  ngOnDestroy(): void {
+    
   }
 }

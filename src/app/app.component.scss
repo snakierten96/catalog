@@ -15,6 +15,10 @@ md-sidenav {
     a.active > div.md-list-item {
       background: $backcolor;
       color: $contrast;
+      
+      .secondary {
+        color: rgba($contrast,0.54);
+      }
     }
   }
 }
