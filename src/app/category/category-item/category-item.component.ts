@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { IItem } from '../category.types';
 
 @Component({
   selector: 'app-category-item',
   templateUrl: './category-item.component.html',
   styleUrls: ['./category-item.component.scss']
 })
-export class CategoryItemComponent implements OnInit {
+export class CategoryItemComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() item: IItem;
 
 }

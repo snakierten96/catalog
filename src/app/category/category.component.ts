@@ -1,9 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-interface IItem {
-  pos: number,
-  title: string
-}
+import { IItem } from './category.types';
 
 @Component({
   selector: 'app-category',
@@ -29,7 +26,10 @@ export class CategoryComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
   }
 
 }

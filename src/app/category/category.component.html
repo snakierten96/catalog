@@ -1,12 +1,4 @@
 <div class="flex-container" fxLayout="row" fxLayoutWrap fxLayoutAlign="space-around start">
-  <div *ngFor="let item of list" fxFlex="25">
-    <md-card>
-      <md-card-header>
-        <md-card-title>{{ item.title }}</md-card-title>
-      </md-card-header>
-      <md-card-content>
-        
-      </md-card-content>
-    </md-card>
-  </div>
+  <app-category-item [item]="item" *ngFor="let item of list" fxFlex="25">
+  </app-category-item>
 </div>
